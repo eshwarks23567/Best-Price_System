@@ -108,9 +108,6 @@ export default function ProductCard({ product: initialProduct, platform }: Produ
           Base: ₹{product.basePrice.toFixed(2)}
         </div>
 
-        <div className="text-xs text-muted-foreground">
-          Updated: {new Date(product.lastUpdated).toLocaleTimeString()}
-        </div>
       </div>
     </Card>
   );

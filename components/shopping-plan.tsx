@@ -21,13 +21,13 @@ export default function ShoppingPlan() {
 
         <Card className="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 border-blue-200">
           <p className="text-sm text-muted-foreground mb-1">Optimal Cost</p>
-          <p className="text-3xl font-bold text-blue-700">₹{shoppingPlan.optimalCost.toLocaleString()}</p>
+          <p className="text-3xl font-bold text-blue-700">₹{Math.round(shoppingPlan.optimalCost)}</p>
         </Card>
 
         <Card className="p-6 bg-gradient-to-br from-amber-50 to-orange-50 border-amber-200">
           <p className="text-sm text-muted-foreground mb-1">Total Savings</p>
           <div>
-            <p className="text-3xl font-bold text-orange-700">₹{shoppingPlan.totalSavings.toLocaleString()}</p>
+            <p className="text-3xl font-bold text-orange-700">₹{Math.round(shoppingPlan.totalSavings)}</p>
             <p className="text-sm text-orange-600 mt-1">{shoppingPlan.savingsPercentage}% off</p>
           </div>
         </Card>
@@ -48,25 +48,25 @@ export default function ShoppingPlan() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="border border-border rounded-lg p-4">
             <p className="text-sm font-medium text-muted-foreground mb-2">Zepto Total</p>
-            <p className="text-2xl font-bold">₹{shoppingPlan.platformTotals.zepto.toLocaleString()}</p>
+            <p className="text-2xl font-bold">₹{Math.round(shoppingPlan.platformTotals.zepto)}</p>
             <p className="text-xs text-red-600 mt-2">
-              +₹{(shoppingPlan.platformTotals.zepto - shoppingPlan.optimalCost).toLocaleString()} vs optimal
+              +₹{Math.round(shoppingPlan.platformTotals.zepto - shoppingPlan.optimalCost)} vs optimal
             </p>
           </div>
 
           <div className="border border-border rounded-lg p-4">
             <p className="text-sm font-medium text-muted-foreground mb-2">Swiggy Total</p>
-            <p className="text-2xl font-bold">₹{shoppingPlan.platformTotals.swiggy.toLocaleString()}</p>
+            <p className="text-2xl font-bold">₹{Math.round(shoppingPlan.platformTotals.swiggy)}</p>
             <p className="text-xs text-red-600 mt-2">
-              +₹{(shoppingPlan.platformTotals.swiggy - shoppingPlan.optimalCost).toLocaleString()} vs optimal
+              +₹{Math.round(shoppingPlan.platformTotals.swiggy - shoppingPlan.optimalCost)} vs optimal
             </p>
           </div>
 
           <div className="border border-border rounded-lg p-4">
             <p className="text-sm font-medium text-muted-foreground mb-2">Blinkit Total</p>
-            <p className="text-2xl font-bold">₹{shoppingPlan.platformTotals.blinkit.toLocaleString()}</p>
+            <p className="text-2xl font-bold">₹{Math.round(shoppingPlan.platformTotals.blinkit)}</p>
             <p className="text-xs text-red-600 mt-2">
-              +₹{(shoppingPlan.platformTotals.blinkit - shoppingPlan.optimalCost).toLocaleString()} vs optimal
+              +₹{Math.round(shoppingPlan.platformTotals.blinkit - shoppingPlan.optimalCost)} vs optimal
             </p>
           </div>
         </div>
